@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Events</title>
+	
+		<script type="text/javascript" language="javascript" src="Jquery.min.js"></script>
+		<script type="text/javascript" language="javascript" src="eventbus.min.js"></script>
+		<script type="text/javascript" language="javascript" src="BowlingGame.js"></script>		
+		<script type="text/javascript" language="javascript" src="Main.js"></script>
+		<script type="text/javascript" language="javascript">
+		
+			window.onload = function() {
+					
+
+				$("#target").submit(function(event){
+					Main.Start(Number($("#pin").val()));				
+					event.preventDefault();
+				});
+				
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+		<form id="target" action="example.html">
+		  Bowl
+		  <input type="text" id="pin" value="">
+		  <input type="submit" value="Go">
+		</form>
+		<div id="result">
+		  Result
+		</div>
+	</body>
+</html>
+
+
